@@ -8,4 +8,6 @@ EXPOSE 8081
 
 RUN npm install
 
+RUN npm install bootstrap
+
 CMD ["npm","run","serve"] 
