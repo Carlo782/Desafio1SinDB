@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="general-container">
     <div>
       <form @submit.prevent="formFiltrar">
         <input type="number" v-model="precio">
@@ -22,16 +22,16 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Brand</th>
-          <th>Year</th>
-          <th>Color</th>
-          <th>Price</th>
-          <th>Turbo</th>
-          <th>Type</th>
-          <th>Motor</th>
-          <th>Popularidad</th>
-          <th>Cabinas</th>
-          <th>Sunroof</th>
+          <th>MARCA</th>
+          <th>AÑO</th>
+          <th>COLOR</th>
+          <th>PRECIO</th>
+          <th>TURBO</th>
+          <th>TIPO</th>
+          <th>MOTOR</th>
+          <th>POPULARIDAD</th>
+          <th>CABINAS</th>
+          <th>SUNROOF</th>
         </tr>
       </thead>
       <tbody>
@@ -133,4 +133,6 @@ export default {
 </script>
 <style>
 @import '@/assets/style.css';
+
+
 </style>
