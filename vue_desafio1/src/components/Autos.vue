@@ -1,7 +1,6 @@
 <template>
   <div>
     <div>
-
       <form @submit.prevent="formFiltrar">
         <input type="number" v-model="precio">
         <select v-model="opcion">
@@ -19,20 +18,20 @@
       </form>
 
     </div>
-    <table class="table table-striped" v-if="autos">
+    <table class="styled-table" v-if="autos">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">Brand</th>
-          <th scope="col">Year</th>
-          <th scope="col">Color</th>
-          <th scope="col">Price</th>
-          <th scope="col">Turbo</th>
-          <th scope="col">Type</th>
-          <th scope="col">Motor</th>
-          <th scope="col">Popularidad</th>
-          <th scope="col">Cabinas</th>
-          <th scope="col">Sunroof</th>
+          <th>#</th>
+          <th>Brand</th>
+          <th>Year</th>
+          <th>Color</th>
+          <th>Price</th>
+          <th>Turbo</th>
+          <th>Type</th>
+          <th>Motor</th>
+          <th>Popularidad</th>
+          <th>Cabinas</th>
+          <th>Sunroof</th>
         </tr>
       </thead>
       <tbody>
@@ -132,3 +131,6 @@ export default {
 
 }
 </script>
+<style>
+@import '@/assets/style.css';
+</style>
