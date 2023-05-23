@@ -3,7 +3,7 @@
     <div>
 
       <form @submit.prevent="formFiltrar">
-       <input type="number" v-model="precio">
+        <input type="number" v-model="precio">
         <select v-model="opcion">
           <option value="">Tipo de filtro</option>
           <option value="Mayor">Mayor</option>
@@ -69,15 +69,9 @@ export default {
     }
   },
 
-  created() {
-    this.vistaInicial();
-
-
-  },
-
   methods: {
 
-    vistaInicial() {
+    listar() {
       axios.get(`http://localhost:8080/automoviles/listar`)
         .then(response => {
           this.autos = response.data;
@@ -87,12 +81,6 @@ export default {
         });
     },
 
-    generarFiltroPreciosSelect() {
-      axios.get(`http://localhost:8080/automoviles/listar`)
-        .then(response => {
-          this.autos = response.data;
-        })  
-    },
 
     generar() {
       axios.get(`http://localhost:8080/automoviles/generar?cantidad=${(this.cantidad - 1)}`)
@@ -126,7 +114,7 @@ export default {
           });
 
       } else {
-        this.vistaInicial();
+         this.listar();
       }
 
     },
